@@ -1,0 +1,19 @@
+.ordenar {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2em;
+}
+
+.seleccionar-orden {
+    height: 1.8em;
+    width: 10em;
+    border-radius: 0.5em;
+    margin-right: 0.5em;
+}
+
+.boton-orden {
+    background-color: #FFD4B3;
+    height: 2em;
+    width: 2em;
+    border-radius: 0.5em;
+}

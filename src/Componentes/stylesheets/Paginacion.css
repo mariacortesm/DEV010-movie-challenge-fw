@@ -1,0 +1,23 @@
+.contenedor-botones-paginacion {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.contenedor-botones-paginacion button {
+    margin: 1.7em;
+    height: 2em;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 0.9em;
+    background-color: #F0F4FF;
+    border-color: #f2f6f8;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.contenedor-botones-paginacion button:hover {
+    background-color: #EE6C4D;
+}
