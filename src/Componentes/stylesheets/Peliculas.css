@@ -1,0 +1,32 @@
+.contenedor-peliculas-principal {
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin: 2em;
+    max-height: 40em;
+    overflow-y: auto;
+}
+
+.peliculas {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 12em;
+    padding: 2em;
+    background-color: #E5FFBE;
+    margin: 1em;
+}
+
+.imagen-pelicula {
+    height: 16rem;
+    width: 12em;
+    object-fit: cover;
+}
+
+.notFoundImage {
+    height: 16rem;
+    width: 12em;
+    object-fit: cover;
+}

@@ -1,0 +1,20 @@
+html, body {
+  background-image: url('https://img.freepik.com/foto-gratis/fondo-pantalla-varios-circulos-transparentes-pequeno_58702-7152.jpg?w=996&t=st=1701895417~exp=1701896017~hmac=d83e5d910df3eb5233981eb6274b6e0336d313efd6bf3b07761f84dd7b14fba1');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contenedor-principal {
+margin: 0;
+padding: 0;
+}
+
+.contenedor-busqueda {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em 0 0 2em;
+}
+
+.contenedor-peliculas {
+  display: grid;
+}
