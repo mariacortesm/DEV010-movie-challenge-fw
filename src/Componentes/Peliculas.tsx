@@ -1,12 +1,14 @@
-import notFoundImage from '../imagenes/not-found.jpg';
+
 import './stylesheets/Peliculas.css';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { dataBase } from './Data/data';
 import Paginacion from './Paginacion';
 import Ordenar from './Ordenar';
+import PeliculaIndividual from './PeliculaIndividual';
 
 interface PeliculaUI {
     title: string;
+    id: number;
     release_date: string;
     poster_path: string | null;
 }
@@ -14,6 +16,7 @@ interface PeliculaUI {
 
 function Peliculas () {
     const [pelicula, setPelicula] = useState<PeliculaUI[] | null>(null);
+
     const [pageState, setPageState] = useState<number>(1)
 
     useEffect(() => {
@@ -23,27 +26,15 @@ function Peliculas () {
     }, [pageState])
 
         return (
-            <>
+            <div className='contenedor-peliculas'>
             <Ordenar pelicula={pelicula} setPelicula={setPelicula} />
             <div className='contenedor-peliculas-principal'>
-            {pelicula !== null ? (
-                pelicula.map((pelicula, movieData) => (
-        <div className="peliculas" key={movieData}> 
-        {pelicula.poster_path ? (
-        <img className='imagen-pelicula' src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}
-        alt={pelicula.title}/>
-        ) : (
-            <img src={notFoundImage} className='notFoundImage'/> )}
-        <h2 className="titulo-pelicula">{pelicula?.title}</h2>
-        <p className="año-pelicula">Año de lanzamiento: {pelicula?.release_date}</p>
-                    </div>
-        ))
-        ) : (
-            <p>Cargando películas...</p>
-        )}
-        </div>
-        <Paginacion pageState={pageState} setPageState={setPageState} />
-        </>
+            {pelicula !== null 
+            ? ( pelicula.map((peli) => <PeliculaIndividual key={peli.id}pelicula={peli}/>)) 
+            : (<p>Cargando películas...</p>)}
+            </div>
+            <Paginacion pageState={pageState} setPageState={setPageState} />
+            </div>
         
     )
 }

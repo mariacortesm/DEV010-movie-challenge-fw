@@ -1,5 +1,6 @@
 // import { useState } from 'react'
 import './App.css';
+import React from 'react';
 import Filter from './Componentes/Filtrar';
 import Peliculas from './Componentes/Peliculas';
 
@@ -9,9 +10,9 @@ function App() {
   return (
       <main className='contenedor-principal'>
         <div className='contenedor-busqueda'>
-        <div className='contenedor-filtro'><Filter/></div>
+        <Filter/>
         </div>
-        <div className='contenedor-peliculas'><Peliculas/></div>
+        <Peliculas/>
       </main>
   )
 }
