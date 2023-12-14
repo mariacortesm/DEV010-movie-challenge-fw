@@ -2,7 +2,7 @@
 // import { dataBase } from "./Data/data";
 import './stylesheets/Paginacion.css';
 
-function Paginacion ( {pageState, setPageState} ) {
+function Paginacion ( {paginacion, setPaginacion} ) {
     // const [index, setIndex] = useState(0)
     
     // useEffect(() => {
@@ -12,11 +12,11 @@ function Paginacion ( {pageState, setPageState} ) {
     // }, []);
 
     const paginaSiguiente = () => {
-        setPageState(pageState + 1)
+        setPaginacion(paginacion + 1)
     }
 
     const paginaAnterior = () => {
-        setPageState(pageState - 1)
+        setPaginacion(paginacion - 1)
     }
 
     return (
