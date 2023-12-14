@@ -1,0 +1,16 @@
+{
+    "opciones": [
+        {
+            "texto": "Más popular",
+            "valor": "popularity.desc" 
+        },
+        {
+            "texto": "Menos popular",
+            "valor": "popularity.asc"
+        },
+        {
+            "texto": "Más recientes",
+            "valor": "primary_release_date.desc"
+        }
+    ]
+}
